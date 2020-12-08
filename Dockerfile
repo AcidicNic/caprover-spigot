@@ -17,7 +17,7 @@ EXPOSE 25565
 # EXPOSE 25575
 
 # Starting the server.
-ENTRYPOINT ["java", "-Xms1024M", "-Xmx2048M", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
+CMD ["java", "-Xms1024M", "-Xmx2048M", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
 
 # I don't know why, but when I changed the CMD above to ENTRYPOINT and added
 # This empty CMD, it lets me use docker commands when I ssh into my sever so I
