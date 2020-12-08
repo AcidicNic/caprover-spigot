@@ -12,6 +12,8 @@ COPY data/ .
 
 # Exposing the default minecraft server port.
 EXPOSE 25565
+EXPOSE 25575
 
 # Starting the server.
-CMD ["java", "-Xms1024M", "-Xmx2048M", "-Darg.set.rcon.password=testPassword", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
+ENTRYPOINT ["java", "-Xms1024M", "-Xmx2048M", "-Darg.set.rcon.password=testPassword", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
+CMD [""]
