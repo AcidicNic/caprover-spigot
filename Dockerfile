@@ -12,6 +12,7 @@ COPY data/ .
 
 # Exposing the default minecraft server port.
 EXPOSE 25565
+# RCON port.
 EXPOSE 25575
 
 # Starting the server.
