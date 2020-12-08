@@ -12,8 +12,9 @@ COPY data/ .
 
 # Exposing the default minecraft server port.
 EXPOSE 25565
-# RCON port.
-EXPOSE 25575
+
+# RCON port (disabled for now).
+# EXPOSE 25575
 
 # Starting the server.
 ENTRYPOINT ["java", "-Xms1024M", "-Xmx2048M", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
