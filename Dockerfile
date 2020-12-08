@@ -14,4 +14,4 @@ COPY data/ .
 EXPOSE 25565
 
 # Starting the server.
-CMD ["java", "-Xms1024M", "-Xmx2048M", "-Darg.get.rcon.password=testPassword", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
+CMD ["java", "-Xms1024M", "-Xmx2048M", "-Darg.set.rcon.password=testPassword", "-Dfile.encoding=UTF-8", "-jar", "spigot-1.16.4.jar", "nogui"]
