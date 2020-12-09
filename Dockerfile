@@ -1,12 +1,11 @@
 # New instance of openjdk to run the server
 FROM adoptopenjdk:11.0.8_10-jre-hotspot-bionic
 
-# Creating workdir for the container
-# WORKDIR /minecraft
-
 # /server should contain spigot.jar
-
+VOLUME ["/server"]
 WORKDIR /server
+
+COPY server/spigot.jar .
 
 # Exposing the default minecraft server port.
 EXPOSE 25565/udp
