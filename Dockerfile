@@ -1,11 +1,11 @@
 # New instance of openjdk to run the server
 FROM adoptopenjdk:11.0.8_10-jre-hotspot-bionic
 
-# /server should contain spigot.jar
+# creates volume to store server data
 VOLUME ["/server"]
 WORKDIR /server
 
-# Comment this line out if running locally
+# Copies spigot.jar to the server volume.
 COPY data/ .
 
 # Exposing the default minecraft server port.
@@ -17,3 +17,5 @@ EXPOSE 25565/tcp
 
 # Starting the server.
 ENTRYPOINT ["java", "-Xms1024M", "-Xmx2048M", "-Dfile.encoding=UTF-8", "-jar", "spigot.jar", "nogui"]
+
+CMD[""]
