@@ -5,8 +5,6 @@ FROM adoptopenjdk:11.0.8_10-jre-hotspot-bionic
 VOLUME ["/server"]
 WORKDIR /server
 
-COPY data/ .
-
 # Exposing the default minecraft server port.
 EXPOSE 25565/udp
 EXPOSE 25565/tcp
