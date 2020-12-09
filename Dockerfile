@@ -18,4 +18,4 @@ EXPOSE 25565/tcp
 # Starting the server.
 ENTRYPOINT ["java", "-Xms1024M", "-Xmx2048M", "-Dfile.encoding=UTF-8", "-jar", "spigot.jar", "nogui"]
 
-CMD[""]
+CMD [""]
